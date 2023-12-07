@@ -250,7 +250,7 @@ header .follow a:hover{
 
 /* media queries */
 
-@media (min-width: 992px) and (min-width: 1024px) {
+@media (min-width: 992px) /*and (min-width: 1024px)*/ {
     .imge_meio{
         display: none !important;
     }
