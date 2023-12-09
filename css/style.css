@@ -41,14 +41,33 @@ section{
     min-height: 100vh;
 }
 
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
 .imge_meio {
     display: none;
 
 }
 
 .imge_meio img{
-    height: 40%;
-    width: 40%;
+    height: 30rem;
+    width: 30rem;
     border-radius: 50%;
 }
 
@@ -103,12 +122,13 @@ header .logo {
     font-size: 3rem;
     font-weight: bolder;
     font-family: 'Dawning of a New Day', cursive;
-
+    
 }
 
 
 header .logo img {
-    width: 30rem;
+    width: 25rem;
+    border-radius: 50%;
 }
 
 header .navbar a {
@@ -241,7 +261,7 @@ header .follow a:hover{
 
 .home .content .text{
     font-family: 'Dancing Script', cursive;
-    font-size: 1.7rem;
+    font-size: 2.7rem;
     color: #666;
     padding: .5rem 0;
 }
@@ -343,6 +363,7 @@ header .follow a:hover{
     color: #666;
     font-size: 1.7rem;
     padding: .5rem 0;
+    line-height: initial;
 }
 
 

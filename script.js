@@ -29,8 +29,6 @@ window.onscroll = () => {
 
 
 
-
-
 let cursor1 = document.querySelector('.cursor-1');
 let cursor2 = document.querySelector('.cursor-2');
 
@@ -58,18 +56,3 @@ document.querySelectorAll('a').map(links => {
 });
 
 
-
-fetch("https://formsubmit.co/ajax/davi.amorin2@gmail.com", {
-    method: "POST",
-    headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify({
-        name: "FormSubmit",
-        message: "I'm from Devro LABS"
-    })
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
