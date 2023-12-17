@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=IBM+Plex+Serif:wght@100;200;300;400;500;600&family=Montserrat:wght@200;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root {
     --main-color: #c79c26;
@@ -9,14 +8,13 @@
 /* RESET */
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'IBM Plex Serif', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: all .2s linear;
     line-height: 1.5;
 }
@@ -36,9 +34,10 @@ body {
     padding-left: 30rem;
 }
 
-section{
+section {
     padding: 1rem 5%;
     min-height: 100vh;
+    
 }
 
 .error {
@@ -65,25 +64,25 @@ section{
 
 }
 
-.imge_meio img{
+.imge_meio img {
     height: 30rem;
     width: 30rem;
     border-radius: 50%;
 }
 
-.heading{
+.heading {
     font-size: 4rem;
     padding-bottom: 1rem;
     color: #111;
     text-transform: uppercase;
 }
 
-.heading span{    
+.heading span {
     color: var(--main-color);
     text-transform: uppercase;
 }
 
-.btn{
+.btn {
     display: inline-block;
     margin-top: 1rem;
     padding: .8rem 3rem;
@@ -93,9 +92,9 @@ section{
     font-size: 1.7rem;
 }
 
-.btn:hover{
-background-color: #111;
-letter-spacing: .2rem;
+.btn:hover {
+    background-color: #111;
+    letter-spacing: .2rem;
 }
 
 /* HEADER SETTINGS */
@@ -112,7 +111,7 @@ header {
     z-index: 1000;
     flex-flow: column;
     padding: 8rem 2rem;
-    width:30rem;
+    width: 30rem;
     text-align: center;
 }
 
@@ -121,8 +120,7 @@ header .logo {
     color: #fff;
     font-size: 3rem;
     font-weight: bolder;
-    font-family: 'Dawning of a New Day', cursive;
-    
+    font-family: 'IBM Plex Serif', serif;
 }
 
 
@@ -138,26 +136,26 @@ header .navbar a {
     margin: 2rem 0;
 }
 
-header .navbar a:hover{
+header .navbar a:hover {
     letter-spacing: .2rem;
     color: var(--main-color);
 }
 
 
-header .follow a{
+header .follow a {
     font-size: 2.5rem;
     color: #fff;
     margin: 1rem .7rem;
 }
 
 
-header .follow a:hover{
+header .follow a:hover {
     color: var(--main-color);
 }
 
 
 
-#menu-bars{
+#menu-bars {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -167,32 +165,36 @@ header .follow a:hover{
     border-radius: .5rem;
     padding: 1rem 1.5rem;
     font-size: 3rem;
-    cursor:pointer;
+    cursor: pointer;
     display: none;
 }
 
 
-.cursor-1{
+.cursor-1 {
     position: absolute;
-    top: 0; left: 0;
-    height: 1rem; width:1rem;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
     background: var(--main-color);
     pointer-events: none;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
 
-.cursor-1.active{
+.cursor-1.active {
     height: 7rem;
     width: 7rem;
     opacity: .3;
 }
 
 
-.cursor-2{
+.cursor-2 {
     position: absolute;
-    top: 0;left: 0;
-    height: 4rem;width: 4rem;
+    top: 0;
+    left: 0;
+    height: 4rem;
+    width: 4rem;
     border: .3rem solid var(--main-color);
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -201,11 +203,11 @@ header .follow a:hover{
     transition: .3s linear;
 }
 
-.cursor-2.active{
+.cursor-2.active {
     display: none;
 }
 
-.home{
+.home {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -214,53 +216,53 @@ header .follow a:hover{
 
 }
 
-.home .image{
+.home .image {
     flex: 1 1 25rem;
 }
 
 
-.home .image img{
+.home .image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border: 1rem solid #fff;
     border-radius: .5rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    
+
 }
 
-.home .content{
+.home .content {
     flex: 1 1 50rem;
 }
 
-.home .content .hi{
-    font-family: 'Dancing Script', cursive;
+.home .content .hi {
+    font-family: 'IBM Plex Serif', serif;
     font-size: 2rem;
     color: var(--main-color);
 }
 
-.home .content h3{
-    font-family: 'Dancing Script', cursive;
+.home .content h3 {
+    font-family: 'IBM Plex Serif', serif;
     font-size: 4.5rem;
     color: #111;
     text-transform: uppercase;
 }
 
-.home .content h3 span{
-    font-family: 'Dancing Script', cursive;
+.home .content h3 span {
+    font-family: 'IBM Plex Serif', serif;
     color: var(--main-color);
     text-transform: uppercase;
 }
 
-.home .content .info{
-    font-family: 'Dancing Script', cursive;
+.home .content .info {
+    font-family: 'IBM Plex Serif', serif;
     font-size: 2.5rem;
     color: #111;
     padding: .5rem 0;
 }
 
-.home .content .text{
-    font-family: 'Dancing Script', cursive;
+.home .content .text {
+    font-family: 'IBM Plex Serif', serif;
     font-size: 2.7rem;
     color: #666;
     padding: .5rem 0;
@@ -270,21 +272,23 @@ header .follow a:hover{
 
 /* media queries */
 
-@media (min-width: 992px) /*and (min-width: 1024px)*/ {
-    .imge_meio{
+@media (min-width: 992px)
+/*and (min-width: 1024px)*/
+    {
+    .imge_meio {
         display: none !important;
     }
 }
 
 
 
-@media (max-width:991px){
+@media (max-width:991px) {
     html {
         font-size: 55%;
-       
+
     }
 
-    section{
+    section {
         margin-bottom: 10rem;
     }
 
@@ -292,13 +296,13 @@ header .follow a:hover{
         padding: 0;
     }
 
-    .imge_meio{
+    .imge_meio {
         margin-top: 20%;
         display: flex;
 
     }
 
-    .imge_meio img{
+    .imge_meio img {
         height: 40%;
         width: 40%;
         border-radius: 50%;
@@ -307,39 +311,39 @@ header .follow a:hover{
         margin: 0 auto;
     }
 
-    #menu-bars{
+    #menu-bars {
         display: initial;
     }
 
-    header{
+    header {
         left: -120%;
     }
 
-    header.active{
-        left:0%;
+    header.active {
+        left: 0%;
     }
 
 
     .cursor-1,
-    .cursor-2{
+    .cursor-2 {
         display: none;
     }
 }
 
 
 
-.about .row-1{
+.about .row-1 {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding-bottom: 2rem;
 }
 
-.about .row-1 .image{
+.about .row-1 .image {
     flex: 1 1 25rem;
 }
 
-.about .row-1 .image img{
+.about .row-1 .image img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -348,58 +352,59 @@ header .follow a:hover{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
-.about .row-1 .content{
+.about .row-1 .content {
     flex: 1 1 50rem;
-    
+
 }
 
-.about .row-1 .content h3{
+.about .row-1 .content h3 {
     color: #333;
     font-size: 3.5rem;
 
 }
 
-.about .row-1 .content p{
+.about .row-1 .content p {
     color: #666;
     font-size: 1.7rem;
     padding: .5rem 0;
     line-height: initial;
+    text-align: justify;
 }
 
 
 
-.about .row-1 .content .box-container{
+.about .row-1 .content .box-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5em;
     padding: 0.5em 0;
 }
 
-.about .row-1 .content .box-container .box{
+.about .row-1 .content .box-container .box {
     flex: 1 1 20rem;
 }
 
-.about .row-1 .content .box-container .box span{
+.about .row-1 .content .box-container .box span {
     color: var(--main-color);
 }
 
-.service .box-container{
+.service .box-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;    
+    gap: 1.5rem;
 }
 
-.service .box-container .box{
+.service .box-container .box {
     flex: 1 1 40rem;
     text-align: center;
     padding: 2rem;
     background-color: #fff;
     border-radius: .5rem;
-    box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1)
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1)
 }
 
 
-.service .box-container .box i{
+.service .box-container .box i {
     height: 6rem;
     width: 6rem;
     line-height: 6rem;
@@ -410,17 +415,18 @@ header .follow a:hover{
 
 }
 
-.service .box-container .box h3{
+.service .box-container .box h3 {
     color: #444;
     font-size: 2.2rem;
     padding-top: 1rem;
 }
 
 
-.service .box-container .box p{
+.service .box-container .box p {
     color: #666;
     font-size: 1.7rem;
     padding-top: 1rem;
+    text-align: justify;
 }
 
 
@@ -431,15 +437,19 @@ header .follow a:hover{
     height: 100%;
 }
 
+.testimonials h1{
+    margin-bottom: 5%;
+}
+
 .carousel-container {
     max-width: 800px;
     margin: 0 auto;
-    overflow: hidden;   
+    overflow: hidden;
 }
 
-.carousel-container button{
+.carousel-container button {
     width: 30%;
-    height: 20%;    
+    height: 20%;
 }
 
 .carousel {
@@ -453,25 +463,39 @@ header .follow a:hover{
 }
 
 .card img {
-    width: 100%;
+    width: 20%;
     height: auto;
     border-radius: 8px;
+    margin-bottom: 5%;
+}
+
+.card h3{
+    margin-top: 5%;
+    font-size: 2rem;
 }
 
 .testimonial-text {
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 0.5rem;
+    letter-spacing: 0.25rem;
+    text-align: justify;
     color: #555;
+    font-size: 2rem;
 }
 
 #prevBtn,
 #nextBtn {
+    margin-top: 10%;
     cursor: pointer;
-    padding: 1px;
     color: white;
-    font-size: 20px;
-    border: none;
-    background-color: #555;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    padding: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
 }
 
 
@@ -484,7 +508,7 @@ header .follow a:hover{
     padding-bottom: 2rem;
 }
 
-.contact .icons-container .icons{
+.contact .icons-container .icons {
     flex: 1 1 25rem;
     text-align: center;
     padding: 2rem;
@@ -493,7 +517,7 @@ header .follow a:hover{
     border-radius: .5rem;
 }
 
-.contact .icons-container .icons i{
+.contact .icons-container .icons i {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
@@ -503,25 +527,26 @@ header .follow a:hover{
     border-radius: 50%;
 }
 
-.contact .icons-container .icons h3{
+.contact .icons-container .icons h3 {
     color: #111;
     font-size: 2rem;
     padding: .5rem 0;
 }
 
-.contact .icons-container .icons p{
+.contact .icons-container .icons p {
     color: #666;
     font-size: 1.7rem;
+    
 }
 
-.contact .row{
+.contact .row {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
 
 }
 
-.contact .row form{
+.contact .row form {
     flex: 1 1 55rem;
     background-color: #fff;
     padding: 0 2rem;
@@ -529,7 +554,7 @@ header .follow a:hover{
     border-radius: .5rem;
 }
 
-.contact .row .map{
+.contact .row .map {
     flex: 1 1 25rem;
     border: 1rem solid #fff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -538,8 +563,7 @@ header .follow a:hover{
 }
 
 .contact .row form .box,
-.contact .row form textarea
-{
+.contact .row form textarea {
     width: 100%;
     border-bottom: .1rem solid #333;
     color: #333;
@@ -550,26 +574,26 @@ header .follow a:hover{
 }
 
 .contact .row form .box:focus,
-.contact .row form textarea:focus{
+.contact .row form textarea:focus {
     border-color: var(--main-color);
 }
 
 .contact .row form .box::placeholder,
-.contact .row form textarea::placeholder{
+.contact .row form textarea::placeholder {
     text-transform: capitalize;
 }
 
-.contact .row form textarea{
+.contact .row form textarea {
     height: 20rem;
     resize: none;
 }
 
-.contact .row form .btn{
+.contact .row form .btn {
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
 
-.footer{
+.footer {
     margin-top: 2rem;
     font-size: 2rem;
     padding: 2.5rem;
@@ -579,22 +603,26 @@ header .follow a:hover{
 
 }
 
-.footer span{
+.footer span {
     color: var(--main-color);
 }
 
-@media (max-width:450px){
+@media (max-width:450px) {
 
-    html{
+    html {
         font-size: 50%;
     }
 
-    header{
+    header {
         width: 100%;
     }
 
-    .home .image img{
+    .home .image img {
         width: 100%;
-        
+
     }
 }
+
+
+/* KEY FRAMES */
+

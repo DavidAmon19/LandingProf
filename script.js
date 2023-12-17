@@ -117,3 +117,10 @@ window.onload = function () {
         showSlide(currentSlide - 1);
     }
 
+
+    // FUNCTION KEY FRAMES
+
+
+    
+    
+    
