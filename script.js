@@ -8,13 +8,13 @@ let imageMeio = document.querySelector('#image_meio_logo');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
-    header.classList.toggle('active'); 
+    header.classList.toggle('active');
 
 
-    if(header.classList.contains('active')){
+    if (header.classList.contains('active')) {
         imageMeio.style.display = 'none';
 
-    }  else {
+    } else {
         imageMeio.style.display = 'flex';
     }
 
@@ -66,7 +66,7 @@ window.onload = function () {
             .then(data => {
                 if (data.address) {
                     const address = `${data.address.road}, ${data.address.city}, ${data.address.country}`;
-                    
+
                     document.getElementById('user_location').value = address;
                 } else {
                     console.error('Nenhum resultado encontrado');
@@ -91,36 +91,56 @@ window.onload = function () {
 // Function carousel
 
 
-    let currentSlide = 0;
+let currentSlide = 0;
 
-    function showSlide(slideIndex) {
-        const slides = document.querySelectorAll('.card');
-        const totalSlides = slides.length;
+function showSlide(slideIndex) {
+    const slides = document.querySelectorAll('.card');
+    const totalSlides = slides.length;
 
-        if (slideIndex >= totalSlides) {
-            currentSlide = 0;
-        } else if (slideIndex < 0) {
-            currentSlide = totalSlides - 1;
-        } else {
-            currentSlide = slideIndex;
-        }
-
-        const offset = -currentSlide * 100 + '%';
-        document.querySelector('.carousel').style.transform = 'translateX(' + offset + ')';
+    if (slideIndex >= totalSlides) {
+        currentSlide = 0;
+    } else if (slideIndex < 0) {
+        currentSlide = totalSlides - 1;
+    } else {
+        currentSlide = slideIndex;
     }
 
-    function nextSlide() {
-        showSlide(currentSlide + 1);
-    }
+    const offset = -currentSlide * 100 + '%';
+    document.querySelector('.carousel').style.transform = 'translateX(' + offset + ')';
+}
 
-    function prevSlide() {
-        showSlide(currentSlide - 1);
-    }
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
 
 
-    // FUNCTION KEY FRAMES
+// FUNCTION KEY FRAMES
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('input_number').onkeyup = function(){
+		mascara( this, mtel );
+	}
+}
 
 
-    
-    
-    
+

@@ -229,10 +229,10 @@
 
         <div class="row">
             <form id="myForm" action="https://formspree.io/f/mwkgkjbd" method="POST">
-                <input id="input_nome" name="name" type="text" placeholder="name" class="box" maxlength="35">
-                <input id="input_email" name="email" type="email" placeholder="email" class="box" maxlength="35">
-                <input id="input_number" name="number" type="number" placeholder="number" class="box">
-                <textarea name="text" placeholder="message" id="input_text" cols="30" rows="10"></textarea>
+                <input id="input_nome" name="name" type="text" placeholder="name" class="box" maxlength="35" required>
+                <input id="input_email" name="email" type="email" placeholder="email" class="box" maxlength="35" required>
+                <input id="input_number" name="number" type="text" placeholder="number" class="box" required maxlength="15">
+                <textarea name="text" placeholder="message" id="input_text" cols="30" rows="10" required></textarea>
 
                 <input type="hidden" name="user_location" id="user_location" value="">
 
