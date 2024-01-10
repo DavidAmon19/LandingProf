@@ -296,6 +296,10 @@ header .follow a:hover {
         padding: 0;
     }
 
+    .carousel-container button {
+        display: none;
+      }
+
     .imge_meio {
         margin-top: 20%;
         display: flex;

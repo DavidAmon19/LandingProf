@@ -91,32 +91,75 @@ window.onload = function () {
 // Function carousel
 
 
+// let currentSlide = 0;
+
+// function showSlide(slideIndex) {
+//     const slides = document.querySelectorAll('.card');
+//     const totalSlides = slides.length;
+
+//     if (slideIndex >= totalSlides) {
+//         currentSlide = 0;
+//     } else if (slideIndex < 0) {
+//         currentSlide = totalSlides - 1;
+//     } else {
+//         currentSlide = slideIndex;
+//     }
+
+//     const offset = -currentSlide * 100 + '%';
+//     document.querySelector('.carousel').style.transform = 'translateX(' + offset + ')';
+// }
+
+// function nextSlide() {
+//     showSlide(currentSlide + 1);
+// }
+
+// function prevSlide() {
+//     showSlide(currentSlide - 1);
+// }
+
 let currentSlide = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+
+const carousel = document.querySelector('.carousel');
 
 function showSlide(slideIndex) {
-    const slides = document.querySelectorAll('.card');
-    const totalSlides = slides.length;
+  const slides = document.querySelectorAll('.card');
+  const totalSlides = slides.length;
 
-    if (slideIndex >= totalSlides) {
-        currentSlide = 0;
-    } else if (slideIndex < 0) {
-        currentSlide = totalSlides - 1;
-    } else {
-        currentSlide = slideIndex;
-    }
+  if (slideIndex >= totalSlides) {
+    currentSlide = 0;
+  } else if (slideIndex < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = slideIndex;
+  }
 
-    const offset = -currentSlide * 100 + '%';
-    document.querySelector('.carousel').style.transform = 'translateX(' + offset + ')';
+  const offset = -currentSlide * 100 + '%';
+  carousel.style.transform = 'translateX(' + offset + ')';
 }
 
 function nextSlide() {
-    showSlide(currentSlide + 1);
+  showSlide(currentSlide + 1);
 }
 
 function prevSlide() {
-    showSlide(currentSlide - 1);
+  showSlide(currentSlide - 1);
 }
 
+carousel.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+
+  if (touchStartX - touchEndX > 50) {
+    nextSlide();
+  } else if (touchEndX - touchStartX > 50) {
+    prevSlide();
+  }
+});
 
 // FUNCTION KEY FRAMES
 function mascara(o,f){
